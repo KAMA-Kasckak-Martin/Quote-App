@@ -6,9 +6,9 @@ fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
   .then((response) => {
     return response.json();
   })
-  .then((dataObject) => {
-    randomq.innerText = dataObject.data[0].quoteText;
-    author.innerText = "-" + dataObject.data[0].quoteAuthor;
+  .then((data) => {
+    randomq.innerText = data.data[0].quoteText;
+    author.innerText = "-" + data.data[0].quoteAuthor;
   });
 
 btn.addEventListener("click", () => {
@@ -16,8 +16,8 @@ btn.addEventListener("click", () => {
     .then((response) => {
       return response.json();
     })
-    .then((dataObject) => {
-      randomq.innerText = dataObject.data[0].quoteText;
-      author.innerText = "-" + dataObject.data[0].quoteAuthor;
+    .then((data) => {
+      randomq.innerText = data.data[0].quoteText;
+      author.innerText = "-" + data.data[0].quoteAuthor;
     });
 });
